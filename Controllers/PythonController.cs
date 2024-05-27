@@ -66,7 +66,7 @@ namespace AGB_Bank.Controllers
             {"OUARGLA", 300}
         };
 
-        // Création du dictionnaire
+        
         public static Dictionary<string, int> gl = new Dictionary<string, int>
         {
             { "Comptes Courants Dinars", 2500 },
@@ -162,19 +162,13 @@ namespace AGB_Bank.Controllers
                 int age = dateActuelle.Year - DateNaissance.Value.Year;
                 int codeAgence = (int)ConvertAgenceToInt(user.agence);
                 int codeGL = (int)ConvertGlToInt(user.gl);
-                // et ainsi de suite pour d'autres propriétés
+               
                 string response = await client.SetApiDataAsync(typeClient,
                     EtatCivil, Gender, codePostal, codeAgence, codeGL, Revenu, age);
             }
 
         }
 
-        //public async Task<IActionResult> Logout()
-        //{
-        //    ISession session = _httpContextAccessor.HttpContext.Session;
-        //    session.Clear();
-        //    return RedirectToAction("Login", "Account");
-        //}
         public async Task<IActionResult> Run()
         {
             ISession session = _httpContextAccessor.HttpContext.Session;
