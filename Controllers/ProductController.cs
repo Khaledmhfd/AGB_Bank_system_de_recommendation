@@ -1,11 +1,6 @@
 ﻿using AGB_Bank.Data;
 using Microsoft.AspNetCore.Mvc;
 
-/*
-using System.Linq;
-using AGB_Bank.Models.product; // Assurez-vous d'importer votre espace de noms pour les modèles
-*/
-
 
 namespace AGB_Bank.Controllers
 {
