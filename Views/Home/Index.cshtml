@@ -24,40 +24,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
-    // $(document).ready(function () {
-    //     $.ajax({
-    //         url: 'Python/Products',
-    //         type: 'GET',
-    //         dataType: 'json',
-    //         success: function (data) {
-    //             // Supprimez d'abord tout contenu existant dans le conteneur
-    //             $('#productContainer').empty();
-
-    //             // Parcourez les données reçues et ajoutez chaque produit au conteneur
-    //             $.each(data, function (index, product) {
-    //                 var cardHtml = `
-    //                         <div class="col-md-4">
-    //                                 <div class="card h-100">
-    //                                 <img src="Product\\${product.ImageUrl}" class="card-img-top product" alt="card image">
-    //                                 <div class="card-body">
-    //                                     <h5 class="card-title">${product.Name}</h5>
-    //                                     <p class="card-text">${product.Description}</p>
-    //                                     <a href="#" class="btn btn-primary">Go somewhere</a>
-    //                                 </div>
-    //                             </div>
-    //                         </div>
-    //                          `;
-    //                 $('#productContainer').append(cardHtml);
-    //             });
-    //         },
-    //         error: function (xhr, status, error) {
-    //             // Traitement en cas d'erreur de la requête
-    //             console.log('Type d\'erreur : ', status); 
-    //             console.log('Message d\'erreur : ', error);
-                
-    //         }
-    //     });
-
         $(document).ready(function () {
             $.ajax({
                 url: 'Python/Products',
