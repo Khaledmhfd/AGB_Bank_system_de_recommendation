@@ -78,13 +78,9 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
     [HttpPost]
     public async Task<IActionResult> Register_Particulier(Register_ParticulierVM model, string? returnUrl = "Home/Index")
     {
-        //ViewData["ReturnUrl"] = returnUrl;
+        
         returnUrl ??= Url.Content("~/");
-        //string controllerName = "Home";
-        //string actionName = "Index";
 
-        // Générer l'URL avec le paramètre returnUrl
-        //string urlAvecReturnUrl = Url.Action(actionName, controllerName, new { returnUrl });
         if (ModelState.IsValid)
         {
             AppUser user = new()
@@ -129,14 +125,9 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
     [HttpPost]
     public async Task<IActionResult> Register_Professionel(Register_ProfessionelVM model, string? returnUrl = "Home/Index")
     {
-        //ViewData["ReturnUrl"] = returnUrl;
+
         returnUrl ??= Url.Content("~/");
 
-        //string controllerName = "Home";
-        //string actionName = "Index"; 
-
-        //// Générer l'URL avec le paramètre returnUrl
-        //string urlAvecReturnUrl = Url.Action(actionName, controllerName, new { returnUrl });
         if (ModelState.IsValid)
         {
             AppUser user = new()
@@ -185,14 +176,8 @@ public class AccountController(SignInManager<AppUser> signInManager, UserManager
     [HttpPost]
     public async Task<IActionResult> Register_Entreprise(Register_EntrepriseVM model, string? returnUrl = "Home/Index")
     {
-        //ViewData["ReturnUrl"] = returnUrl;
         returnUrl ??= Url.Content("~/");
 
-        //string controllerName = "Home";
-        //string actionName = "Index"; 
-
-       
-        //string urlAvecReturnUrl = Url.Action(actionName, controllerName, new { returnUrl });
         if (ModelState.IsValid)
         {
             AppUser user = new()
