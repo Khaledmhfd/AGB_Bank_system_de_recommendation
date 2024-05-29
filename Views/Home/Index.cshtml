@@ -15,19 +15,22 @@
 <div class="container">
     <h2 class="text-center mb-4">Recommended Product</h2>
     <div id="productContainer" class="row gy-3 row-cols-1 row-cols-md-3 g-4">
-
+            <div id="loadingSpinner"></div>
     </div>
 </div>
 
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
+   // Show the loading spinner
+   $('#loadingSpinner').show();
         $(document).ready(function () {
             $.ajax({
                 url: 'Python/Products',
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
+                    $('#loadingSpinner').hide();
                     // Supprimez d'abord tout contenu existant dans le conteneur
                     $('#productContainer').empty();
 
