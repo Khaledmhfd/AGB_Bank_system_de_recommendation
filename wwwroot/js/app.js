@@ -12,7 +12,7 @@ for (let i = 0; i < dropList.length; i++) {
     for (let currency_code in country_list) {
         let selected =
             i == 0
-                ? currency_code == "USD"
+                ? currency_code == "EUR"
                     ? "selected"
                     : ""
                 : currency_code == "DZD"
@@ -27,8 +27,10 @@ for (let i = 0; i < dropList.length; i++) {
 
     dropList[i].addEventListener("change", (e) => {
         loadFlag(e.target);
+        getExchangeValue(); 
     });
 }
+
 
 function loadFlag(element) {
     for (let code in country_list) {
